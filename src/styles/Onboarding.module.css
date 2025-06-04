@@ -1,0 +1,160 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-6);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.progress {
+    height: 4px;
+    background-color: var(--color-border);
+    border-radius: 2px;
+    margin-bottom: var(--spacing-8);
+}
+
+.progressBar {
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.step {
+    margin-bottom: var(--spacing-8);
+}
+
+.step h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-6);
+    color: var(--color-text);
+}
+
+.formGroup {
+    margin-bottom: var(--spacing-6);
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: var(--spacing-2);
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+    width: 100%;
+    padding: var(--spacing-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-base);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-2);
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    padding: var(--spacing-1) var(--spacing-2);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+}
+
+.tag button {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 0;
+    font-size: var(--font-size-base);
+    line-height: 1;
+}
+
+.selectionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-2);
+}
+
+.selectionButton {
+    padding: var(--spacing-2) var(--spacing-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-align: left;
+    font-size: var(--font-size-sm);
+}
+
+.selectionButton:hover {
+    border-color: var(--color-primary);
+}
+
+.selectionButton.selected {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+}
+
+.backButton,
+.nextButton {
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.backButton {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.backButton:hover {
+    background-color: var(--color-background-hover);
+}
+
+.nextButton {
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+}
+
+.nextButton:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.nextButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

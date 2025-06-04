@@ -1,0 +1,108 @@
+.newChatContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-6);
+}
+
+.pageHeader {
+    margin-bottom: var(--spacing-8);
+}
+
+.pageTitle {
+    font-size: var(--font-size-2xl);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-2);
+}
+
+.pageDescription {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+}
+
+.formSection {
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+}
+
+.sectionTitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-4);
+}
+
+.formGrid {
+    display: grid;
+    gap: var(--spacing-4);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.formGroup {
+    margin-bottom: var(--spacing-4);
+}
+
+.label {
+    display: block;
+    margin-bottom: var(--spacing-2);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.input {
+    width: 100%;
+    padding: var(--spacing-3);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-border);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-base);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-8);
+}
+
+.submitButton {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.submitButton:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.cancelButton {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.cancelButton:hover {
+    background-color: var(--color-surface-hover);
+}

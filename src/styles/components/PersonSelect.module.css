@@ -1,0 +1,208 @@
+.personSelect {
+    position: relative;
+    background: var(--color-surface);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+}
+
+.personSelect:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.searchContainer {
+    position: relative;
+    padding: var(--spacing-3);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.searchIcon {
+    position: absolute;
+    left: var(--spacing-5);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    pointer-events: none;
+}
+
+.searchInput {
+    width: 100%;
+    padding: var(--spacing-3) var(--spacing-3) var(--spacing-3) var(--spacing-10);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-border);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-base);
+    background-color: var(--color-background);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.dropdown {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: var(--spacing-2);
+    background-color: var(--color-surface);
+}
+
+.option {
+    padding: var(--spacing-3);
+    cursor: pointer;
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-base);
+    margin-bottom: var(--spacing-2);
+    border: 1px solid transparent;
+}
+
+.option:hover {
+    background-color: var(--color-background);
+    border-color: var(--color-border);
+}
+
+.option:last-child {
+    margin-bottom: 0;
+}
+
+.selected {
+    background-color: var(--color-selected);
+    border-color: var(--color-primary);
+}
+
+.selected:hover {
+    background-color: var(--color-selected);
+}
+
+.personInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.personName {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.personMeta {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.noResults {
+    padding: var(--spacing-6);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.noResultsIcon {
+    font-size: var(--font-size-4xl);
+    color: var(--color-text-muted);
+    opacity: 0.5;
+}
+
+.formGroup {
+    padding: var(--spacing-4);
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    display: grid;
+    gap: var(--spacing-3);
+}
+
+.input {
+    width: 100%;
+    padding: var(--spacing-3);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-border);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-base);
+    background-color: var(--color-surface);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.addButton {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-3);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+}
+
+.addButton:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.addButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Loading States */
+.loadingState {
+    padding: var(--spacing-6);
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.skeleton {
+    background: linear-gradient(90deg,
+            var(--color-background) 25%,
+            var(--color-surface) 50%,
+            var(--color-background) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: var(--border-radius-md);
+    height: 24px;
+    margin-bottom: var(--spacing-2);
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.linkedinField {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.inputError {
+    border-color: var(--color-error);
+}
+
+.inputError:focus {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 2px var(--color-error-light);
+}
+
+.errorMessage {
+    color: var(--color-error);
+    font-size: var(--font-size-sm);
+    margin-top: calc(var(--spacing-1) * -1);
+}

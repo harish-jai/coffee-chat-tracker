@@ -1,0 +1,175 @@
+.chat-notes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.chat-notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.person-info h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.person-info h1 a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.person-info h1 a:hover {
+    text-decoration: underline;
+}
+
+.person-info h2 {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin: 0 0 0.5rem 0;
+}
+
+.chat-metadata {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.chat-metadata span:not(:last-child)::after {
+    content: "•";
+    margin: 0 0.5rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.favorite-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: color 0.2s;
+}
+
+.favorite-button.active {
+    color: #fbbf24;
+}
+
+.notes-sections {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.notes-sections section {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notes-sections h3 {
+    margin: 0 0 1rem 0;
+    color: #1f2937;
+    font-size: 1.25rem;
+}
+
+.notes-sections textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.notes-sections textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.notes-sections textarea::placeholder {
+    color: #9ca3af;
+}
+
+.ai-summary-section {
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ai-summary-section h3 {
+    color: #1f2937;
+    margin: 0 0 1rem 0;
+}
+
+.placeholder-text {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.chat-notes-footer {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1.5rem;
+}
+
+.footer-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-actions label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4b5563;
+}
+
+.footer-actions input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+}
+
+.footer-actions button {
+    padding: 0.5rem 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+}
+
+.footer-actions button:hover {
+    background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+    .chat-notes-container {
+        padding: 1rem;
+    }
+
+    .chat-notes-header {
+        flex-direction: column;
+    }
+
+    .header-actions {
+        margin-top: 1rem;
+    }
+
+    .notes-sections {
+        gap: 1rem;
+    }
+}
